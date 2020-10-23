@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 60%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  width: 50%;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: none;
+  border-top: none;
+}
+table {
+  border-collapse: collapse;
+  width: 75%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+
+</style>
+</head>
+<body>
+<p>
+</p>
+<center>
+    <table>
+<td>
+<div class="card">
+  <div class="container">
+    <br><br>
+    <img src="https://www.flaticon.com/svg/static/icons/svg/900/900618.svg" width="60px" height="60px">
+    <h4><b>CPU Benchmark</b></h4> 
+    <p>Geekbench 5 measures your processor's single-core and multi-core power, for everything from checking your email to taking a picture to playing music, or all of it at once. Geekbench 5's CPU benchmark measures performance in new application areas including Augmented Reality and Machine Learning, so you'll know how close your system is to the cutting-edge.</p> 
+  </div>
+</div>
+</td>
+<td>
+  <br><br>
+
+<div class="card">
+  <div class="container">
+    <br><br>
+    <img src="https://www.flaticon.com/svg/static/icons/svg/867/867644.svg" width="60px" height="60px">
+    
+    <h4><b>Compute Benchmark</b></h4> 
+    <p>Test your system's potential for gaming, image processing, or video editing with the Compute Benchmark. Test your GPU's power with support for the OpenCL, CUDA, and Metal APIs. New to Geekbench 5 is support for Vulkan, the next-generation cross-platform graphics and compute API.</p> 
+  </div>
+</div>
+
+  <br><br>
+
+</td>
+<td>
+
+<div class="card">
+  <div class="container">
+    <br><br>
+    <img src="https://www.flaticon.com/svg/static/icons/svg/2037/2037075.svg" width="60px" height="60px">
+    
+    <h4><b>Cross-Platform</b></h4> 
+    <p>Compare apples and oranges. Or Apples and Samsungs. Designed from the ground-up for cross-platform comparisons, Geekbench 5 allows you to compare system performance across devices, operating systems, and processor architectures. Geekbench 5 supports Android, iOS, macOS, Windows, and Linux.
+    </p> 
+  </div>
+</div>
+</td>
+</table>
+<br><br>
+
+<button  style="border-radius: 25px;color: rgb(0,123,255);
+  background-color: rgb(0,123,255); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;">Visit GeekBench</button>
+
+<br><br>
+<br><br>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Single Core</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Multi-Core</button>
+
+</div>
+<div id="London" class="tabcontent">
+  <table>
+    <tr>
+      <th id="box2">Devices</th>
+      <th id="box3">Score</th>
+    </tr>
+    
+<tr>
+<td id="box5"></center>
+    iMac (27-inch Retina Early 2019)
+<p style="font-size: 14px; color: #000;">Intel Core i9-9900K @ 3.6 GHz (8 cores)</p>
+</td>
+<td id="box4">1242</td>
+</tr>
+<tr>
+<td  id="box5">
+    MacBook Pro (13-inch Mid 2020)
+<p style="font-size: 14px; color: #000;">Intel Core i7-1068NG7 @ 2.3 GHz (4 cores)</p>
+</td>
+<td id="box4">1234</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Pro (13-inch Mid 2020)
+<p style="font-size: 14px; color: #000;">Intel Core i5-1038NG7 @ 2.0 GHz (4 cores)</p>
+</td>
+<td id="box4">1142</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Air (Early 2020)
+<p style="font-size: 14px;  color: #000;">Intel Core i7-1060NG7 @ 1.2 GHz (4 cores)</p>
+</td>
+<td id="box4">1134</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac Pro (Late 2019)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-3275M @ 2.5 GHz (28 cores)</p>
+</td>
+<td id="box4">1133</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac (27-inch Retina Early 2019)
+<p style="font-size: 14px; color: #000;">Intel Core i5-9600K @ 3.7 GHz (6 cores)</p>
+</td>
+<td id="box4">1131</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac (21.5-inch Retina Early 2019)
+<p style="font-size: 14px; color: #000;">Intel Core i7-8700 @ 3.2 GHz (6 cores)</p>
+</td>
+<td id="box4">1127</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac Pro (Late 2017)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-2150B @ 3.0 GHz (10 cores)</p>
+</td>
+<td id="box4">1125</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac Pro (Late 2019)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-3245 @ 3.2 GHz (16 cores)</p>
+</td>
+<td id="box4">1124</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac Pro (Late 2019)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-3235 @ 3.3 GHz (12 cores)</p>
+</td>
+<td id="box4">1123</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac Pro (Late 2019)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-3265M @ 2.7 GHz (24 cores)</p>
+</td>
+<td id="box4">1123</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac mini (Late 2018)
+<p style="font-size: 14px; color: #000;">Intel Core i7-8700B @ 3.2 GHz (6 cores)</p>
+</td>
+<td id="box4">1116</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac (27-inch Retina Mid 2017)
+<p style="font-size: 14px; color: #000;">Intel Core i7-7700K @ 4.2 GHz (4 cores)</p>
+</td>
+<td id="box4">1115</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Pro (15-inch Mid 2019)
+
+<p style="font-size: 14px; color: #000;">Intel Core i9-9980HK @ 2.4 GHz (8 cores)</p>
+</td>
+<td id="box4">1115</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Pro (15-inch Mid 2019)
+<p style="font-size: 14px; color: #000;">Intel Core i9-9980HK @ 2.4 GHz (8 cores)</p>
+</td>
+<td id="box4">1115</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac Pro (Late 2017)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-2191B @ 2.3 GHz (18 cores)z</p>
+</td>
+<td id="box4">1111</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Pro (16-inch Late 2019)
+<p style="font-size: 14px; color: #000;">Intel Core i9-9980HK @ 2.4 GHz (8 cores)</p>
+</td>
+<td id="box4">1110</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Pro (13-inch Mid 2019)
+<p style="font-size: 14px; color: #000;">
+    Intel Core i7-8569U @ 2.8 GHz (4 cores)</p>
+</td>
+<td id="box4">1103</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac Pro (Late 2017)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-2170B @ 2.5 GHz (14 cores)
+</p>
+</td>
+<td id="box4">1094</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Pro (15-inch Mid 2019)
+<p style="font-size: 14px; color: #000;">Intel Core i9-9880H @ 2.3 GHz (8 cores)</p>
+</td>
+<td id="box4">1082</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac Pro (Late 2017)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-2140B @ 3.2 GHz (8 cores)
+</p>
+</td>
+<td id="box4">1074</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Pro (16-inch Late 2019)
+<p style="font-size: 14px; color: #000;">Intel Core i9-9880H @ 2.3 GHz (8 cores)</p>
+</td>
+<td id="box4">1073</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Air (Early 2020)
+<p style="font-size: 14px; color: #000;">Intel Core i5-1030NG7 @ 1.1 GHz (4 cores)</p>
+</td>
+<td id="box4">1073</td>
+</tr>
+
+  </table>
+</div>  
+<div id="Paris" class="tabcontent">
+  <table>
+    <tr>
+      <th>Devices</th>
+      <th>Score</th>
+    </tr>
+    <tr>
+     <td id="box5"></center>
+    Mac Pro (Late 2019)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-3275M @ 2.5 GHz (28 cores)</p>
+</td>
+<td id="box4">19300</td>
+</tr>
+<tr>
+<td  id="box5">
+    Mac Pro (Late 2019)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-3265M @ 2.7 GHz (24 cores)</p>
+</td>
+<td id="box4">18182</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac Pro (Late 2019)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-3245 @ 3.2 GHz (16 cores)
+</p>
+</td>
+<td id="box4">14649</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac Pro (Late 2017)
+
+<p style="font-size: 14px;  color: #000;">Intel Xeon W-2191B @ 2.3 GHz (18 cores)
+</p>
+</td>
+<td id="box4">13440</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac Pro (Late 2019)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-3235 @ 3.3 GHz (12 cores)
+</p>
+</td>
+<td id="box4">11939</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac (27-inch Retina Early 2019)
+<p style="font-size: 14px; color: #000;">Intel Core i5-9600K @ 3.7 GHz (6 cores)</p>
+</td>
+<td id="box4">1131</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac Pro (Late 2017)
+
+<p style="font-size: 14px; color: #000;">Intel Xeon W-2170B @ 2.5 GHz (14 cores)
+</p>
+</td>
+<td id="box4">10769</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac Pro (Late 2017)
+
+<p style="font-size: 14px; color: #000;">Intel Xeon W-2150B @ 3.0 GHz (10 cores)</p>
+</td>
+<td id="box4">9442</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac (27-inch Retina Early 2019)
+
+<p style="font-size: 14px; color: #000;">Intel Core i9-9900K @ 3.6 GHz (8 cores)
+</p>
+</td>
+<td id="box4">8284</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac Pro (Late 2019)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-3235 @ 3.3 GHz (12 cores)</p>
+</td>
+<td id="box4">8169</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac Pro (Late 2017)
+<p style="font-size: 14px; color: #000;">Intel Xeon W-2140B @ 3.2 GHz (8 cores)
+</p>
+</td>
+<td id="box4">8012</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac Pro (Late 2019)
+
+<p style="font-size: 14px; color: #000;"> Intel Xeon W-3223 @ 3.5 GHz (8 cores)</p>
+</td>
+<td id="box4">7943</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac Pro (Late 2013)
+
+<p style="font-size: 14px; color: #000;">Intel Xeon E5-2697 v2 @ 2.7 GHz (12 cores)
+</p>
+</td>
+<td id="box4">7033</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Pro (16-inch Late 2019)
+
+<p style="font-size: 14px; color: #000;">Intel Core i9-9980HK @ 2.4 GHz (8 cores)</p>
+</td>
+<td id="box4">6887</td>
+</tr>
+<tr>
+<td id="box5">
+   MacBook Pro (16-inch Late 2019)
+<p style="font-size: 14px; color: #000;">Intel Core i9-9980HK @ 2.4 GHz (8 cores)</p>
+</td>
+<td id="box4">6561</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Pro (15-inch Mid 2019)
+
+<p style="font-size: 14px; color: #000;">Intel Core i9-9980HK @ 2.4 GHz (8 cores)
+</p>
+</td>
+<td id="box4">6535</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Pro (15-inch Mid 2019)
+<p style="font-size: 14px; color: #000;">Intel Core i9-9980HK @ 2.4 GHz (8 cores)
+</p>
+</td>
+<td id="box4">6535</td>
+</tr>
+<tr>
+<td id="box5">
+    MacBook Pro (15-inch Mid 2019)
+
+<p style="font-size: 14px; color: #000;">
+    Intel Core i9-9880H @ 2.3 GHz (8 cores)
+</p>
+</td>
+<td id="box4">6074</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac (21.5-inch Retina Early 2019)
+
+<p style="font-size: 14px; color: #000;">iMac (21.5-inch Retina Early 2019)
+
+</p>
+</td>
+<td id="box4">6023</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac Pro (Late 2013)
+<p style="font-size: 14px; color: #000;">Intel Xeon E5-1680 v2 @ 3.0 GHz (8 cores)</p>
+</td>
+<td id="box4">5883</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac Pro (Mid 2012)
+<p style="font-size: 14px; color: #000;">Intel Xeon X5675 @ 3.1 GHz (12 cores)
+
+</p>
+</td>
+<td id="box4">5685</td>
+</tr>
+<tr>
+<td id="box5">
+    Mac mini (Late 2018)
+
+<p style="font-size: 14px; color: #000;">Intel Core i7-8700B @ 3.2 GHz (6 cores)
+</p>
+</td>
+<td id="box4">5493</td>
+</tr>
+<tr>
+<td id="box5">
+    iMac (27-inch Retina Early 2019)
+
+<p style="font-size: 14px; color: #000;">Intel Core i5-9600K @ 3.7 GHz (6 cores)
+</p>
+</td>
+<td id="box4">5446</td>
+</tr>
+  </table>
+</div>
+</center>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<center>
+<img src="https://www.geekbench.com/img/corktown/macos-result-dark.png" width="65%" height="100%">
+<br><br>
+</center>
+
+<footer>
+  <p style="font-size: 12px; text-align: center;color: grey;">
+    Geekbench is a trademark of Primate Labs Inc., registered in the U.S. and other countries. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google Inc.
+
+Copyright Â© 2004-2019 Primate Labs Inc.
+  </p>
+</footer>
+
+</body>
+</html> 

@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 60%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  width: 33.33%;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: none;
+  border-top: none;
+}
+table {
+  border-collapse: collapse;
+  width: 75%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+
+</style>
+</head>
+<body>
+<p>
+</p>
+<center>
+  <table>
+<td>
+<div class="card">
+  <div class="container">
+    <br><br>
+    <img src="https://www.flaticon.com/svg/static/icons/svg/900/900618.svg" width="60px" height="60px">
+    <h4><b>CPU Benchmark</b></h4> 
+    <p>Geekbench 5 measures your processor's single-core and multi-core power, for everything from checking your email to taking a picture to playing music, or all of it at once. Geekbench 5's CPU benchmark measures performance in new application areas including Augmented Reality and Machine Learning, so you'll know how close your system is to the cutting-edge.</p> 
+  </div>
+</div>
+</td>
+<td>
+  <br><br>
+
+<div class="card">
+  <div class="container">
+    <br><br>
+    <img src="https://www.flaticon.com/svg/static/icons/svg/867/867644.svg" width="60px" height="60px">
+    
+    <h4><b>Compute Benchmark</b></h4> 
+    <p>Test your system's potential for gaming, image processing, or video editing with the Compute Benchmark. Test your GPU's power with support for the OpenCL, CUDA, and Metal APIs. New to Geekbench 5 is support for Vulkan, the next-generation cross-platform graphics and compute API.</p> 
+  </div>
+</div>
+
+  <br><br>
+
+</td>
+<td>
+
+<div class="card">
+  <div class="container">
+    <br><br>
+    <img src="https://www.flaticon.com/svg/static/icons/svg/2037/2037075.svg" width="60px" height="60px">
+    
+    <h4><b>Cross-Platform</b></h4> 
+    <p>Compare apples and oranges. Or Apples and Samsungs. Designed from the ground-up for cross-platform comparisons, Geekbench 5 allows you to compare system performance across devices, operating systems, and processor architectures. Geekbench 5 supports Android, iOS, macOS, Windows, and Linux.
+    </p> 
+  </div>
+</div>
+</td>
+</table>
+<br><br> 
+
+<button onclick="" style="border-radius: 25px;color: rgb(0,123,255);
+  background-color: rgb(0,123,255); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;">Visit GeekBench</button> 
+<br><br>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Single Core</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Multi-Core</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Metal</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <table>
+     <tr>
+      <th id="box2">Devices</th>
+      <th id="box3">Score</th>
+    </tr>
+      <tr>
+      <td id="box5">
+        iPhone 11 Pro Max
+        <p style="font-size: 14px; color: #000;">Apple A13 Bionic @2.7 GHz</p>
+      </td>
+      <td id="box4">1327</td>
+    </tr>
+    <tr>
+      <td  id="box5">
+        iPhone 11 Pro
+      <p style="font-size: 14px; color: #000;">Apple A13 Bionic @2.7 GHz</p>
+      </td>
+      <td id="box4">1326</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 11
+        <p style="font-size: 14px; color: #000;">Apple A13 Bionic @2.7 GHz</p>
+      </td>
+      <td id="box4">1324</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone SE (2nd generation)
+        <p style="font-size: 14px;  color: #000;">Apple A13 Bionic @2.7 GHz</p>
+      </td>
+      <td id="box4">1321</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro 12.9-inch (4th generation)
+        <p style="font-size: 14px; color: #000;">Apple A12Z Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">1118</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro 11-inch (2nd generation)
+        <p style="font-size: 14px; color: #000;">Apple A12Z Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">1116</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro (11-inch)
+        <p style="font-size: 14px; color: #000;">Apple A12X Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">1113</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro 12.9-inch (3rd generation)
+        <p style="font-size: 14px; color: #000;">Apple A12X Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">1113</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Air (3rd generation)
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">1112</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad mini (5th generation)
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">1110</td>
+    </tr>
+    <tr>
+      <td id="box5">
+      iPhone XS Max
+      <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">1109</td>
+    </tr>
+    <tr>
+      <td id="box5">iPhone XR
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">1106</td>
+    </tr>
+    <tr>
+      <td id="box5">
+      iPhone XS
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">1106</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 8 Plus
+        <p style="font-size: 14px; color: #000;">Apple A11 Bionic @2.4 GHz</p>
+      </td>
+      <td id="box4">922</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 8
+        <p style="font-size: 14px; color: #000;">Apple A11 Bionic @2.4 GHz</p>
+      </td>
+      <td id="box4">916</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone X
+        <p style="font-size: 14px; color: #000;">Apple A11 Bionic @2.4 GHz</p>
+      </td>
+      <td id="box4">916</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro 12.9-inch (2nd generation)
+        <p style="font-size: 14px; color: #000;">Apple A10X Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">831</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro (10.5 inch)
+        <p style="font-size: 14px; color: #000;">Apple A10X Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">830</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad (6th generation)
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">758</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad (7th generation)
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">753</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 7
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">738</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 7 Plus
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">738</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro (12.9-inch)
+        <p style="font-size: 14px; color: #000;">Apple A9X Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">647</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro (9.7-ich)
+        <p style="font-size: 14px; color: #000;">Apple A9X Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">643</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPod (7th generation)
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @1.6 GHz</p>
+      </td>
+      <td id="box4">563</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPod (5th generation)
+        <p style="font-size: 14px; color: #000; color: #000;">Apple A9 @1.8 GHz</p>
+      </td>
+      <td id="box4">552</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone SE
+        <p style="font-size: 14px; color: #000;">Apple A9 @1.8 GHz</p>
+      </td>
+      <td id="box4">545</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 6s
+        <p style="font-size: 14px; color: #000;">Apple A9 @1.8 GHz</p>
+      </td>
+      <td id="box4">539</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 6s Plus
+        <p style="font-size: 14px; color: #000;">Apple A9 @1.8 GHz</p>
+      </td>
+      <td id="box4">539</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Air 2
+        <p style="font-size: 14px; color: #000;">Apple A8X @1.5 GHz</p>
+      </td>
+      <td id="box4">378</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad mini 4
+        <p style="font-size: 14px; color: #000; color: #000;">Apple A8 @1.5 GHz</p>
+      </td>
+      <td id="box4">357</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 6 Plus
+        <p style="font-size: 14px; color: #000;">Apple A8 @1.4 GHz</p>
+      </td>
+      <td id="box4">313</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 6
+        <p style="font-size: 14px; color: #000;">Apple A8 @1.4 GHz</p>
+      </td>
+      <td id="box4">307</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Air
+        <p style="font-size: 14px; color: #000;">Apple A7 @1.5 GHz</p>
+      </td>
+      <td id="box4">278</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPod Touch (6th generation)
+        <p style="font-size: 14px; color: #000;">Apple A8 @1.1 GHz</p>
+      </td>
+      <td id="box4">270</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 5s
+        <p style="font-size: 14px; color: #000;">Apple A7  @1.3 GHz</p>
+      </td>
+      <td id="box4">259</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad mini (Retina)
+        <p style="font-size: 14px; color: #000;">Apple A7  @1.3 GHz</p>
+      </td>
+      <td id="box4">259</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad mini 3
+        <p style="font-size: 14px; color: #000;">Apple A7  @1.3 GHz</p>
+      </td>
+      <td id="box4">258</td>
+    </tr>
+  </table>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <table>
+    <tr>
+      <th id="box2">Devices</th>
+      <th id="box3">Score</th>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro 12.9-inch (4th generation)
+        <p style="font-size: 14px; color: #000;">Apple A12Z Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">4632</td>
+    </tr>
+    <tr>
+      <td  id="box5">
+        iPad Pro 11-inch (2nd generation)
+        <p style="font-size: 14px; color: #000;">Apple A12Z Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">4625</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro (11-inch)
+        <p style="font-size: 14px; color: #000;">Apple A12X Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">4606</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro 12.9-inch (3rd generation)
+        <p style="font-size: 14px; color: #000;">Apple A12X Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">4585</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 11 Pro Max
+        <p style="font-size: 14px; color: #000;">Apple A13 Bionic @2.7 GHz</p>
+      </td>
+      <td id="box4">3368</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 11 Pro
+        <p style="font-size: 14px; color: #000;">Apple A13 Bionic @2.7 GHz</p>
+      </td>
+      <td id="box4">3363</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 11
+        <p style="font-size: 14px; color: #000;">Apple A13 Bionic @2.7 GHz</p>
+      </td>
+      <td id="box4">3160</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Air (3rd generation)
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">2864</td>
+    </tr>
+    <tr>
+      <td id="box5">
+          iPad mini (5th generation)
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">2776</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone SE (2nd generation)
+        <p style="font-size: 14px;  color: #000;">Apple A13 Bionic @2.7 GHz</p>
+      </td>
+      <td id="box4">2759</td>
+    </tr>
+    <tr>
+      <td id="box5">
+      iPhone XS
+      <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">2653</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone XS Max
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">2616</td>
+    </tr>
+    <tr>
+      <td id="box5">
+      iPhone XR
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">2489</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone X
+        <p style="font-size: 14px; color: #000;">Apple A11 Bionic @2.4 GHz</p>
+      </td>
+      <td id="box4">2321</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 8 Plus
+        <p style="font-size: 14px; color: #000;">Apple A11 Bionic @2.4 GHz</p>
+      </td>
+      <td id="box4">2281</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro 12.9-inch (2nd generation)
+        <p style="font-size: 14px; color: #000;">Apple A10X Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">2269</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro (10.5 inch)
+        <p style="font-size: 14px; color: #000;">Apple A10X Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">2261</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 8
+        <p style="font-size: 14px; color: #000;">Apple A11 Bionic @2.4 GHz</p>
+      </td>
+      <td id="box4">2159</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad (6th generation)
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">1403</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad (7th generation)
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">1389</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 7 Plus
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">1319</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 7
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">1307</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro (12.9-inch)
+        <p style="font-size: 14px; color: #000;">Apple A9X Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">1194</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro (9.7-ich)
+        <p style="font-size: 14px; color: #000;">Apple A9X Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">1177</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPod (7th generation)
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @1.6 GHz</p>
+      </td>
+      <td id="box4">1074</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Air 2
+        <p style="font-size: 14px; color: #000;">Apple A8X @1.5 GHz</p>
+      </td>
+      <td id="box4">1049</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad (5th generation)
+        <p style="font-size: 14px; color: #000;">Apple A9 @1.8 GHz</p>
+      </td>
+      <td id="box4">1026</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone SE
+        <p style="font-size: 14px; color: #000;">Apple A9 @1.8 GHz</p>
+      </td>
+      <td id="box4">1000</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 6s Plus
+        <p style="font-size: 14px; color: #000;">Apple A9 @1.8 GHz</p>
+      </td>
+      <td id="box4">989</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 6s
+        <p style="font-size: 14px; color: #000;">Apple A9 @1.8 GHz</p>
+      </td>
+      <td id="box4">986</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad mini 4
+        <p style="font-size: 14px; color: #000;">Apple A8  @1.5 GHz</p>
+      </td>
+      <td id="box4">668</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 6 Plus
+        <p style="font-size: 14px; color: #000;">Apple A8 @1.4 GHz</p>
+      </td>
+      <td id="box4">572</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 6
+        <p style="font-size: 14px; color: #000;">Apple A8 @1.4 GHz</p>
+      </td>
+      <td id="box4">566</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Air
+        <p style="font-size: 14px; color: #000;">Apple A7 @1.5 GHz</p>
+      </td>
+      <td id="box4">526</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPod Touch (6th generation)
+        <p style="font-size: 14px; color: #000;">Apple A8 @1.1 GHz</p>
+      </td>
+      <td id="box4">519</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad mini 3
+        <p style="font-size: 14px; color: #000;">Apple A7  @1.3 GHz</p>
+      </td>
+      <td id="box4">492</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad mini (Retina)
+        <p style="font-size: 14px; color: #000;">Apple A7  @1.3 GHz</p>
+      </td>
+      <td id="box4">488</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 5s
+        <p style="font-size: 14px; color: #000;">Apple A7  @1.3 GHz</p>
+      <td id="box4">475</td>
+    </tr>
+  </table>
+
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <table>
+    <tr>
+      <th id="box2">Devices</th>
+      <th id="box3">Score</th>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro 11-inch (2nd generation)
+        <p style="font-size: 14px; color: #000;">Apple A12Z Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">10439</td>
+    </tr>
+    <tr>
+      <td  id="box5">
+        iPad Pro 12.9-inch (4th generation)
+        <p style="font-size: 14px; color: #000;">Apple A12Z Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">10359</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro (11-inch)
+        <p style="font-size: 14px; color: #000;">Apple A12X Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">9335</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro 12.9-inch (3rd generation)
+        <p style="font-size: 14px; color: #000;">Apple A12X Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">9229</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone SE (2nd generation)
+        <p style="font-size: 14px;  color: #000;">Apple A13 Bionic @2.7 GHz</p>
+      </td>
+      <td id="box4">6552</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro 12.9-inch (2nd generation)
+        <p style="font-size: 14px; color: #000;">Apple A10X Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">6528</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro (10.5 inch)
+        <p style="font-size: 14px; color: #000;">Apple A10X Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">6517</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 11 Pro
+        <p style="font-size: 14px; color: #000;">Apple A13 Bionic @2.7 GHz</p>
+      </td>
+      <td id="box4">6446</td>
+    </tr>
+    <tr>
+      <td id="box5">
+          iPhone 11 Pro Max
+        <p style="font-size: 14px; color: #000;">Apple A13 Bionic @2.7 GHz</p>
+      </td>
+      <td id="box4">6336</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 11
+        <p style="font-size: 14px; color: #000;">Apple A13 Bionic @2.7 GHz</p>
+      </td>
+      <td id="box4">6308</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Air (3rd generation)
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">4663</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone XS Max
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">4641</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad mini (5th generation)
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      <td id="box4">4629</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone XS
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">4569</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone XR
+        <p style="font-size: 14px; color: #000;">Apple A12 Bionic @2.5 GHz</p>
+      </td>
+      <td id="box4">4526</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro (9.7-inch)
+        <p style="font-size: 14px; color: #000;">Apple A9X Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">3830</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Pro (12.9-inch)
+        <p style="font-size: 14px; color: #000;">Apple A9X Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">3704</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone X
+        <p style="font-size: 14px; color: #000;">Apple A11 Bionic @2.4 GHz</p>
+      </td>
+      <td id="box4">3276</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 8 Plus
+        <p style="font-size: 14px; color: #000;">Apple A11 Bionic @2.4 GHz</p>
+      </td>
+      <td id="box4">3260</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 8
+        <p style="font-size: 14px; color: #000;">Apple A11 Bionic @2.4 GHz</p>
+      </td>
+      <td id="box4">3191</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad (7th generation)
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">2921</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad (6th generation)
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">2872</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 7 Plus
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">2837</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 7
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @2.3 GHz</p>
+      </td>
+      <td id="box4">2823</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad (5th generation)
+        <p style="font-size: 14px; color: #000;">Apple A9 @1.8 GHz</p>
+      </td>
+      <td id="box4">2281</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 6s Plus
+        <p style="font-size: 14px; color: #000;">Apple A9 @1.8 GHz</p>
+      </td>
+      <td id="box4">2263</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 6s
+        <p style="font-size: 14px; color: #000;">Apple A9 @1.8 GHz</p>
+      </td>
+      <td id="box4">2242</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone SE
+        <p style="font-size: 14px; color: #000;">Apple A9 @1.8 GHz</p>
+      </td>
+      <td id="box4">2234</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPod (7th generation)
+        <p style="font-size: 14px; color: #000;">Apple A10 Fusion @1.6 GHz</p>
+      </td>
+      <td id="box4">2151</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Air 2
+        <p style="font-size: 14px; color: #000;">Apple A8X @1.5 GHz</p>
+      </td>
+      <td id="box4">771</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad mini 4
+        <p style="font-size: 14px; color: #000;">Apple A8  @1.5 GHz</p>
+      </td>
+      <td id="box4">515</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 6 Plus
+        <p style="font-size: 14px; color: #000;">Apple A8 @1.4 GHz</p>
+      </td>
+      <td id="box4">496</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPod Touch (6th generation)
+        <p style="font-size: 14px; color: #000;">Apple A8 @1.1 GHz</p>
+      </td>
+      <td id="box4">452</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 6
+        <p style="font-size: 14px; color: #000;">Apple A8 @1.4 GHz</p>
+      </td>
+      <td id="box4">451</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad Air
+        <p style="font-size: 14px; color: #000;">Apple A7 @1.5 GHz</p>
+      </td>
+      <td id="box4">21</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPhone 5s
+        <p style="font-size: 14px; color: #000;">Apple A7  @1.3 GHz</p>
+      </td>
+      <td id="box4">20</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad mini (Retina)
+        <p style="font-size: 14px; color: #000;">Apple A7  @1.3 GHz</p>
+      </td>
+      <td id="box4">20</td>
+    </tr>
+    <tr>
+      <td id="box5">
+        iPad mini 3
+        <p style="font-size: 14px; color: #000;">Apple A7  @1.3 GHz</p>
+      </td>
+      <td id="box4">20</td>
+    </tr>
+  </table>
+</div>
+
+<br><br>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+
+<center>
+<img src="https://www.geekbench.com/img/corktown/macos-result-dark.png" width="65%" height="100%">
+<br><br>
+</center>
+
+<footer>
+  <p style="font-size: 12px; text-align: center;color: grey;">
+    Geekbench is a trademark of Primate Labs Inc., registered in the U.S. and other countries. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google Inc.
+
+Copyright Â© 2004-2019 Primate Labs Inc.
+  </p>
+</footer>
+
+
+</body>
+</html> 
